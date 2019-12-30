@@ -1,4 +1,4 @@
 class ChannelSerializer < ActiveModel::Serializer
-  attributes :id, :description
+  attributes :id, :name, :description
   has_many :chats
 end
