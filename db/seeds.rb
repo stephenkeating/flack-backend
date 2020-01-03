@@ -16,11 +16,14 @@ Chat.destroy_all
 
 @cloudCity = Channel.create(name: 'Cloud City', description: 'Bespin')
 @deathStar = Channel.create(name: 'Death Star II', description: 'Death Star MK. 2')
+@tatooine = Channel.create(name: 'Tatooine', description: 'Deserty')
 
 ChannelUser.create(user: @vader, channel: @cloudCity)
 ChannelUser.create(user: @vader, channel: @deathStar)
+ChannelUser.create(user: @vader, channel: @tatooine)
 ChannelUser.create(user: @luke, channel: @cloudCity)
 ChannelUser.create(user: @luke, channel: @deathStar)
+ChannelUser.create(user: @luke, channel: @tatooine)
 
 Chat.create(channel: @cloudCity, user: @vader, message: 'There is no escape! Don’t make me destroy you. Luke, you do not yet realize your importance. You’ve only begun to discover your power! Join me, and I will complete your training! With our combined strength, we can end this destructive conflict, and bring order to the galaxy.')
 Chat.create(channel: @cloudCity, user: @luke, message: 'I’ll never join you!')
